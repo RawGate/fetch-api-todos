@@ -1,0 +1,211 @@
+body {
+    background-image: url('img/download.png');
+    animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #474F7A;
+  }
+  
+  .header__title {
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #E6A4B4;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;  
+  }
+  
+  .clock {
+    font-family: "Acme", sans-serif;
+    font-size: 20px;
+    color: #E6A4B4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  .todo-box {
+    border: 3px solid #E6A4B4;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  .todo-item__checkbox {
+    margin-right: 10px;
+    /* Added styles for checkbox */
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .todo-item__checkbox:checked {
+    background-color: #E6A4B4;
+    border-color: #E6A4B4;
+  }
+  .completed {
+    text-decoration: line-through;
+    text-decoration-style:wavy;
+    color: #FFD0EC;
+  }
+  
+  .todo-item__checkbox:checked::before {
+    content: '\2713';
+    display: block;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .todo-item__title {
+    font-family: "Acme", sans-serif;
+    flex-grow: 1;
+    color: #fff;
+  }
+  .todo-details {
+    font-family: "Acme", sans-serif;
+    color: #aeb3cc;
+    font-size: 12px; 
+  }
+  .button-container {
+    margin-left: 10px;
+  }
+  
+  .add-todo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #474F7A;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  #todo-input {
+    font-family: "Acme", sans-serif;
+    flex-grow: 1;
+    margin-right: 10px;
+    animation: fade-in 0.5s ease-in-out;
+  }
+  
+  #add-button {
+    font-family: "Acme", sans-serif;
+    background-color: #E6A4B4;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  #add-button:hover {
+    color: #474F7A;
+  }
+  /* Style the save button */
+  .save-button {
+    background-color: #E6A4B4;
+    color: #000;
+  }
+  
+  .save-button:hover {
+    background-color: #474F7A;
+  }
+  
+  /* Add some padding and margin to the buttons */
+  .add-todo button,
+  .save-button {
+    padding: 8px 16px;
+    margin-left: 8px;
+  }
+  
+  .edit-button,
+  .delete-button {
+    font-size: 9px;
+    padding: 2px 4px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #E6A4B4;
+  }
+  
+  /* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .todo-app {
+      max-width: 300px;
+    }
+  }
+  
+  /* Media Query for low resolution Tablets, Ipads */
+  @media (min-width: 481px) and (max-width: 767px) {
+    .todo-app {
+      max-width: 300px;
+    }
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .todo-app {
+      max-width: 400px;
+    }
+  }
+  
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1550px) {
+    .todo-app {
+      max-width: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .todo-app {
+      max-width: 200px;
+    }
+  }
+  
