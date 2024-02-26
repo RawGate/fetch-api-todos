@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://jsonplaceholder.typicode.com/todos')
       .then(response => response.json())
       .then(todos => {
-        const chunkedTodos = chunkArray(todos.slice(0, 60), 1); // Chunk the todos into groups of three
+        const chunkedTodos = chunkArray(todos.slice(0, 200), 1); // Chunk the todos into groups of three
         chunkedTodos.forEach(chunk => {
           const todoBox = document.createElement('div');
           todoBox.classList.add('todo-box');
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const todoItem = event.target.closest('.todo-item');
         const todoTitle = todoItem.querySelector('.todo-item__title');
         todoTitle.contentEditable = false;
-        event.target.textContent = 'Edit';
+        event.target.textContent = '✎';
         event.target.classList.add('edit-button');
         event.target.classList.remove('save-button');
       }

@@ -59,7 +59,10 @@ transform: translateY(0);
     gap: 20px;
     padding: 20px;
     animation: fade-in 0.5s ease-in-out;
-  }
+    
+    }
+    
+
   
   .todo-box {
     border: 3px solid #E6A4B4;
@@ -89,6 +92,7 @@ transform: translateY(0);
   }
   .completed {
     text-decoration: line-through;
+    text-decoration-style:wavy;
     color: #FFD0EC;
   }
   
@@ -142,6 +146,7 @@ transform: translateY(0);
   }
   /* Style the save button */
   .save-button {
+    font-family: "Acme", sans-serif;
     background-color: #E6A4B4;
     color: #000;
   }
