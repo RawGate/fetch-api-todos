@@ -105,7 +105,7 @@ transform: translateY(0);
   .completed {
     text-decoration: line-through;
     text-decoration-style:wavy;
-    color: #FFD0EC;
+    color: #9b5a6a;
   }
   
   .todo-item__checkbox:checked::before {
