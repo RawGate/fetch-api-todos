@@ -75,6 +75,11 @@ transform: translateY(0);
     border: 3px solid #E6A4B4;
     border-radius: 15px;
     padding: 10px;
+    
+  }
+  .todo-box:hover {
+    transform: scale(1.1);
+    background-color: #5c4874;
   }
   
   .todo-item {
