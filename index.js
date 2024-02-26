@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://jsonplaceholder.typicode.com/todos')
       .then(response => response.json())
       .then(todos => {
-        const chunkedTodos = chunkArray(todos.slice(0, 12), 1); // Chunk the todos into groups of three
+        const chunkedTodos = chunkArray(todos.slice(0, 60), 1); // Chunk the todos into groups of three
         chunkedTodos.forEach(chunk => {
           const todoBox = document.createElement('div');
           todoBox.classList.add('todo-box');
