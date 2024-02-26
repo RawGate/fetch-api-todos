@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   
-    // Update the clock every second
+    // Update the clock
     setInterval(function() {
       const now = new Date();
       const hours = now.getHours().toString().padStart(2, '0');

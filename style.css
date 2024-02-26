@@ -52,6 +52,13 @@ transform: translateY(0);
       transform: scale(1);
     }
   }
+  .container {
+    max-height: 600px; 
+    overflow: auto;
+    border: 1px solid #E6A4B4;
+    border-radius: 10px;
+    padding: 10px;
+  }
   
   .main {
     display: grid;
